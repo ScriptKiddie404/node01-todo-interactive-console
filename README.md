@@ -1,11 +1,5 @@
 # Interactive console application.
 
-[1. Introduction](https://github.com/ScriptKiddie404/node01-todo-interactive-console.git#Introduction)
-
-[2. Installation](https://github.com/ScriptKiddie404/node01-todo-interactive-console.git#Installation)
-
-[3. Usage](https://github.com/ScriptKiddie404/node01-todo-interactive-console.git#Installation#Usage)
-
 ## Introduction
 
 In this small application, some libraries are tested to try to imitate interactive applications (such as the angular CLI) and others that allow them to be more eye-catching for the user and much more friendly.
