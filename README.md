@@ -18,7 +18,7 @@ To generate unique id's, we use uuid library.
 
 It is only necessary to install the list of dependencies, for this it is enough to run in terminal:
 
-```
+```bash
 npm install
 ```
 
@@ -26,7 +26,7 @@ npm install
 
 Execute the applitacion with (position yourself in the application folder with the console or through your editor):
 
-```
+```bash
 node app.js
 
 ```
@@ -38,3 +38,5 @@ You should see something like this:
 Once the application is launched, it is only necessary to enter the description of the task (you can use the number one or the arrow keys on the keyboard). Subsequently, it is only necessary to enter the name of the task, in case the name is empty, a validation error will be thrown.
 
 ![Adding task descriptiom image](images/image02.png)
+
+
