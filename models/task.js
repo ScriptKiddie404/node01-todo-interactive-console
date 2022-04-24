@@ -1,3 +1,5 @@
+const { v4 } = require('uuid');
+
 class Task {
 
     id = '';
@@ -5,6 +7,7 @@ class Task {
     finishedDate = null;
 
     constructor(description) {
+        this.id = v4();
         this.description = description;
     }
 

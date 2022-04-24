@@ -62,11 +62,35 @@ const pause = async () => {
 
     console.log('\n');
     await inquirer.prompt(question);
+    console.clear();
 
+
+}
+
+const readInput = async (message) => {
+
+    console.clear()
+   
+    const question = [
+        {
+            type: 'input',
+            name: 'description',
+            message,
+            validate(value = '') {
+                const error = 'Please enter a description.'
+                return value.length === 0 ? error : true;
+            }
+        }
+    ];
+
+    const { description } = await inquirer.prompt(question);
+
+    return description;
 
 }
 
 module.exports = {
     menu,
-    pause
+    pause,
+    readInput
 }

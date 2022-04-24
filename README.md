@@ -11,6 +11,9 @@ For this application, the famous npm "colors" package has been used, this allows
 
 To generate the interactive menus, "inquirer" has been used, which is responsible for adding interactivity to the console applications.
 
+To generate unique id's, we use uuid library.
+
+
 ## Installation.
 
 It is only necessary to install the list of dependencies, for this it is enough to run in terminal:
@@ -32,4 +35,6 @@ You should see something like this:
 ![Interactive menu image](images/image01.png)
 
 
+Once the application is launched, it is only necessary to enter the description of the task (you can use the number one or the arrow keys on the keyboard). Subsequently, it is only necessary to enter the name of the task, in case the name is empty, a validation error will be thrown.
 
+![Adding task descriptiom image](images/image02.png)
