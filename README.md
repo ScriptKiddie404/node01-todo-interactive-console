@@ -1,6 +1,7 @@
 # Interactive console application.
 
 [1. Introduction](https://github.com/ScriptKiddie404/node01-todo-interactive-console.git#Introduction)
+
 [2. Installation](https://github.com/ScriptKiddie404/node01-todo-interactive-console.git#Installation)
 
 [3. Usage](https://github.com/ScriptKiddie404/node01-todo-interactive-console.git#Installation#Usage)
