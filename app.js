@@ -16,7 +16,7 @@ const Tasks = require('./models/tasks');
 
         switch (selectedOption) {
             case 1:
-                const taskDescription = await readInput('Write task description: ');
+                const taskDescription = await readInput('Write task description:');
                 tasks.addTask(taskDescription);
                 break;
             case 2:

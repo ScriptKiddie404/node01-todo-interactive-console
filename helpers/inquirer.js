@@ -1,4 +1,3 @@
-const { blue } = require('colors');
 const inquirer = require('inquirer');
 require('colors');
 
@@ -10,31 +9,31 @@ const menuQuestions = [
         choices: [
             {
                 value: 1,
-                name: "1. Crete a task."
+                name: `${'1'.blue} Create a task.`
             },
             {
                 value: 2,
-                name: "2. List tasks."
+                name: `${'2.'.blue} List tasks.`
             },
             {
                 value: 3,
-                name: "3. List finished tasks."
+                name: `${'3.'.blue} List finished tasks.`
             },
             {
                 value: 4,
-                name: "4. List incomplete tasks."
+                name: `${'4.'.blue} List incomplete tasks.`
             },
             {
                 value: 5,
-                name: "5. Finish tasks."
+                name: `${'5.'.blue} Finist tasks.`
             },
             {
                 value: 6,
-                name: "6. Delete tasks."
+                name: `${'6.'.blue} Delete tasks.`
             },
             {
                 value: 7,
-                name: "7. Exit."
+                name: `${'7.'.blue} Exit.`
             }
         ]
     }
