@@ -21,3 +21,15 @@ npm install
 
 ## Usage
 
+Execute the applitacion with (position yourself in the application folder with the console or through your editor):
+
+```
+node app.js
+
+```
+You should see something like this:
+
+![Interactive menu image](images/image01.png)
+
+
+

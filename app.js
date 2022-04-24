@@ -3,7 +3,7 @@ require('colors');
 // =============================== Our imports ==================================== //
 const { menu, pause } = require('./helpers/inquirer');
 
-const consoleApp = async () => {
+(async () => {
 
     let selectedOption;
 
@@ -13,7 +13,5 @@ const consoleApp = async () => {
         await pause();
 
     } while (selectedOption !== 7);
-
-}
-
-consoleApp();
+    
+})();
