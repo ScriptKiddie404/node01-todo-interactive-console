@@ -1,10 +1,20 @@
 // =========================== Thid party imports ================================= //
 require('colors');
 // =============================== Our imports ==================================== //
-const { inquireMenu } = require('./helpers/inquirer');
+const { menu, pause } = require('./helpers/inquirer');
 
+const consoleApp = async () => {
 
+    let selectedOption;
 
-(async () => {
-    const selectedOption = await inquireMenu(); 
-})();
+    do {
+
+        selectedOption = await menu();
+        console.log(selectedOption);
+        await pause();
+        
+    } while (selectedOption !== 7);
+
+}
+
+consoleApp();
