@@ -1,40 +1,40 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
 require('colors');
 
-const menuQuestions = [
+let menuQuestions = [
     {
-        type: 'list',
-        name: 'option',
-        message: 'What do you want to do?',
+        type: "list",
+        name: "option",
+        message: "What do you want to do?",
         choices: [
             {
                 value: 1,
-                name: `1. Crete a task.`
+                name: "1. Crete a task."
             },
             {
                 value: 2,
-                name: `2. List tasks.`
+                name: "2. List tasks."
             },
             {
                 value: 3,
-                name: `3. List finished tasks.`
-
+                name: "3. List finished tasks."
             },
             {
                 value: 4,
-                name: `4. List incomplete tasks.`
+                name: "4. List incomplete tasks."
             },
             {
                 value: 5,
-                name: `5. Finish tasks.`
+                name: "5. Finish tasks."
             },
             {
                 value: 6,
-                name: `6. Delete tasks.`
+                name: "6. Delete tasks."
             },
             {
                 value: 7,
-                name: `7. Exit.`
+                name: "7. Exit."
             }
         ]
     }
@@ -63,7 +63,7 @@ const pause = async () => {
 
     await inquirer.prompt(question);
 
-    
+
 }
 
 module.exports = {

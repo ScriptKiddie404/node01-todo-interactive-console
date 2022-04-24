@@ -10,9 +10,8 @@ const consoleApp = async () => {
     do {
 
         selectedOption = await menu();
-        console.log(selectedOption);
         await pause();
-        
+
     } while (selectedOption !== 7);
 
 }
