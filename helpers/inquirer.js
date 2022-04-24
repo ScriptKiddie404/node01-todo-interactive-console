@@ -1,8 +1,8 @@
+const { blue } = require('colors');
 const inquirer = require('inquirer');
-const fs = require('fs');
 require('colors');
 
-let menuQuestions = [
+const menuQuestions = [
     {
         type: "list",
         name: "option",
@@ -44,9 +44,8 @@ const menu = async () => {
 
     console.clear();
     console.log(`====================`.blue);
-    console.log(`${'='.blue} Select an option ${'='.blue}`);
-    console.log(`====================\n`.blue);
-
+    console.log(`= ${`Select an option`.white} ${'='.blue}`.blue);
+    console.log(`====================`.blue);
     const { option } = await inquirer.prompt(menuQuestions);
 
     return option;
@@ -58,9 +57,10 @@ const pause = async () => {
     const question = {
         type: 'input',
         name: 'enter',
-        message: `Press ${`ENTER`.blue} to continue...`
+        message: `Press ${`enter`.blue} to continue...`
     }
 
+    console.log('\n');
     await inquirer.prompt(question);
 
 
