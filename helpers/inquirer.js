@@ -17,7 +17,7 @@ const menuQuestions = [
             },
             {
                 value: 3,
-                name: `${'3.'.blue} List finished tasks.`
+                name: `${'3.'.blue} List completed tasks.`
             },
             {
                 value: 4,
@@ -25,7 +25,7 @@ const menuQuestions = [
             },
             {
                 value: 5,
-                name: `${'5.'.blue} Finist tasks.`
+                name: `${'5.'.blue} Mark tasks as completed.`
             },
             {
                 value: 6,

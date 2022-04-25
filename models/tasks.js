@@ -40,7 +40,7 @@ class Tasks {
         this.tasksArr.forEach((task, index) => {
             const newIndex = `${index + 1}.`.blue;
             const { description, finishedDate } = task;
-            const state = (finishedDate) ? `Finished`.blue : `Not finished`.red;
+            const state = (finishedDate) ? `Completed`.blue : `Not Completed`.red;
             console.log(`${newIndex} ${description} ::: ${state}`);
         });
 
@@ -57,7 +57,7 @@ class Tasks {
         this.tasksArr.forEach(task => {
 
             const { description, finishedDate } = task;
-            const state = (finishedDate) ? `Finished`.blue : `Not finished`.red;
+            const state = (finishedDate) ? `Complited`.blue : `Not Completed`.red;
 
 
             if (finished) {
