@@ -9,7 +9,7 @@ const menuQuestions = [
         choices: [
             {
                 value: 1,
-                name: `${'1'.blue} Create a task.`
+                name: `${'1.'.blue} Create a task.`
             },
             {
                 value: 2,
