@@ -45,6 +45,35 @@ class Tasks {
 
     }
 
+
+    listFinishedAndNotFinished(finished = true) {
+
+        console.clear();
+        let counter = 0;
+
+        this.tasksArr.forEach(task => {
+
+            const { description, finishedDate } = task;
+            const state = (finishedDate) ? `Finished`.blue : `Not finished`.red;
+
+
+            if (finished) {
+                if (finishedDate) {
+                    counter++;
+                    console.log(`${counter}. `.blue + ` ${description} ::: ${finishedDate}`);
+                }
+            } else {
+                if (!finishedDate) {
+                    counter++;
+                    console.log(`${counter}. `.blue + ` ${description} ::: ${state}`);
+                }
+            }
+
+        });
+
+
+    }
+
 }
 
 module.exports = Tasks;

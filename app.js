@@ -15,8 +15,8 @@ const Tasks = require('./models/tasks');
 
     // We load previous tasks if data exists:
     const savedTasks = loadData();
-    
-    if(savedTasks){
+
+    if (savedTasks) {
         tasks.loadTasksFromArray(savedTasks);
     }
 
@@ -32,6 +32,14 @@ const Tasks = require('./models/tasks');
                 break;
             case 2:
                 tasks.listTasksWithFormat();
+                await pause();
+                break;
+            case 3:
+                tasks.listFinishedAndNotFinished();
+                await pause();
+                break;
+            case 4:
+                tasks.listFinishedAndNotFinished(false);
                 await pause();
                 break;
             default:
