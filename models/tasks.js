@@ -35,6 +35,8 @@ class Tasks {
 
         console.clear();
 
+        this.noTaskWarning();
+
         this.tasksArr.forEach((task, index) => {
             const newIndex = `${index + 1}.`.blue;
             const { description, finishedDate } = task;
@@ -49,6 +51,7 @@ class Tasks {
     listFinishedAndNotFinished(finished = true) {
 
         console.clear();
+        this.noTaskWarning();
         let counter = 0;
 
         this.tasksArr.forEach(task => {
@@ -73,6 +76,13 @@ class Tasks {
 
 
     }
+
+    noTaskWarning() {
+        if (this.tasksArr.length === 0) {
+            console.log(`No tasks have been registered yet.`.yellow);
+        }
+    }
+
 
 }
 
