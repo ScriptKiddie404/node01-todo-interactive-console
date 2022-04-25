@@ -31,7 +31,7 @@ const Tasks = require('./models/tasks');
                 await pause();
                 break;
             case 2:
-                console.log(tasks.tasksArr);
+                tasks.listTasksWithFormat();
                 await pause();
                 break;
             default:
@@ -40,7 +40,7 @@ const Tasks = require('./models/tasks');
         }
 
         // We save all the tasks on .json
-        // saveData(tasks.tasksArr);
+        saveData(tasks.tasksArr);
 
     } while (selectedOption !== 7);
 

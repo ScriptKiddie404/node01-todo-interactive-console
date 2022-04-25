@@ -25,10 +25,24 @@ class Tasks {
         return taskList;
     }
 
-    loadTasksFromArray (tasks = []){
+    loadTasksFromArray(tasks = []) {
         tasks.forEach(task => {
             this.list[task.id] = task;
         });
+    }
+
+    listTasksWithFormat() {
+
+        console.clear();
+
+        this.tasksArr.forEach((task, index) => {
+            const newIndex = `${index + 1}.`.blue;
+            const { description, finishedDate } = task;
+            const state = (finishedDate) ? `Finished`.blue : `Not finished`.red;
+            console.log(`${newIndex} ${description} ::: ${state}`);
+        });
+
+
     }
 
 }

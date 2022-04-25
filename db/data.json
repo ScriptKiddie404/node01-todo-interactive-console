@@ -1,13 +1,1 @@
-[{
-    "id": "bf899e24-24f7-4d2c-a296-231e42ac3bef",
-    "description": "Hablar mucho",
-    "finishedDate": null
-}, {
-    "id": "2994f573-216d-4353-9524-97aad47dcf16",
-    "description": "Hace poco",
-    "finishedDate": null
-}, {
-    "id": "f06c64e5-c8a7-439a-9f51-291b4ae3a195",
-    "description": "Comer comida",
-    "finishedDate": null
-}]
+[{"id":"bf899e24-24f7-4d2c-a296-231e42ac3bef","description":"Hablar mucho","finishedDate":"algo"},{"id":"2994f573-216d-4353-9524-97aad47dcf16","description":"Hace poco","finishedDate":null},{"id":"f06c64e5-c8a7-439a-9f51-291b4ae3a195","description":"Comer comida","finishedDate":null},{"id":"4de1831f-6858-46bb-8f18-a8d2c62adcf4","description":"hacer pendejadas","finishedDate":null}]
