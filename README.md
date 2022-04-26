@@ -39,4 +39,4 @@ Once the application is launched, it is only necessary to enter the description 
 
 ![Adding task descriptiom image](images/image02.png)
 
-
+Finally: it's just a matter of reading the menu options and trying each one.
