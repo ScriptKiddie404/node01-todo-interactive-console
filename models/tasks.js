@@ -35,8 +35,6 @@ class Tasks {
 
         console.clear();
 
-        this.noTaskWarning();
-
         this.tasksArr.forEach((task, index) => {
             const newIndex = `${index + 1}.`.blue;
             const { description, finishedDate } = task;
@@ -51,14 +49,6 @@ class Tasks {
     listFinishedAndNotFinished(finished = true) {
 
         console.clear();
-
-        if (this.tasksArr.length !== 0) {
-            console.log(`===========================`.blue);
-            console.log(`=`.blue + ` List of completed tasks` + ` =`.blue);
-            console.log(`===========================`.blue);
-        } else {
-            this.noTaskWarning();
-        }
 
         let counter = 0;
 
@@ -85,17 +75,36 @@ class Tasks {
 
     }
 
-    noTaskWarning() {
-        if (this.tasksArr.length === 0) {
-            console.log(`No tasks have been registered yet.`.yellow);
-        }
-    }
-
     deleteTask(id = '') {
 
         if (this.list[id]) {
             delete this.list[id];
         }
+
+    }
+
+    toggleCompletedTasks(ids = []) {
+
+        ids.forEach(id => {
+
+            const task = this.list[id]; //We recover single task.
+
+            if (!task.finishedDate) { //If there is not date, means not finished, so, we add a date
+                task.finishedDate = new Date().toISOString();
+            }
+
+        });
+
+        /* 
+            Now we need to verify if the the array of id's includes the id's of the tasks, if not, means the task 
+            is marked as not finished, so, we need to change the date as null.
+        */
+
+        this.tasksArr.forEach(task => {
+            if (!ids.includes(task.id)) {
+                this.list[task.id].finishedDate = null;
+            }
+        });
 
     }
 

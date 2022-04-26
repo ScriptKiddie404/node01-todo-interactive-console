@@ -102,6 +102,11 @@ const listTasksForDelete = async (tasks = []) => {
 
     });
 
+    choices.unshift({
+        value: 0,
+        name: '0. '.yellow + 'Cancel.'
+    })
+
     const questions = [
         {
             type: 'list',
@@ -114,6 +119,36 @@ const listTasksForDelete = async (tasks = []) => {
     const { id } = await inquirer.prompt(questions);
 
     return id;
+
+}
+
+
+const showCheckList = async (tasks = []) => {
+
+    const choices = tasks.map((task, index) => {
+
+        const actualIndex = `${index + 1}.`.blue;
+
+        return {
+            value: task.id,
+            name: `${actualIndex} ${task.description}.`,
+            checked: (task.finishedDate) ? true : false
+        }
+
+    });
+
+    const question = [
+        {
+            type: 'checkbox',
+            name: 'ids',
+            message: 'Select tasks to mark as finished',
+            choices
+        }
+    ]
+
+    const { ids } = await inquirer.prompt(question);
+
+    return ids;
 
 }
 
@@ -137,5 +172,6 @@ module.exports = {
     pause,
     readInput,
     listTasksForDelete,
-    confirmation
+    confirmation,
+    showCheckList
 }
