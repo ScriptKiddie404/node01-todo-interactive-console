@@ -51,13 +51,21 @@ class Tasks {
     listFinishedAndNotFinished(finished = true) {
 
         console.clear();
-        this.noTaskWarning();
+
+        if (this.tasksArr.length !== 0) {
+            console.log(`===========================`.blue);
+            console.log(`=`.blue + ` List of completed tasks` + ` =`.blue);
+            console.log(`===========================`.blue);
+        } else {
+            this.noTaskWarning();
+        }
+
         let counter = 0;
 
         this.tasksArr.forEach(task => {
 
             const { description, finishedDate } = task;
-            const state = (finishedDate) ? `Complited`.blue : `Not Completed`.red;
+            const state = (finishedDate) ? `Completed`.blue : `Not Completed`.red;
 
 
             if (finished) {
@@ -81,6 +89,14 @@ class Tasks {
         if (this.tasksArr.length === 0) {
             console.log(`No tasks have been registered yet.`.yellow);
         }
+    }
+
+    deleteTask(id = '') {
+
+        if (this.list[id]) {
+            delete this.list[id];
+        }
+
     }
 
 

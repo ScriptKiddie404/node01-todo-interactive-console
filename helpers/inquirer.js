@@ -69,7 +69,7 @@ const pause = async () => {
 const readInput = async (message) => {
 
     console.clear()
-   
+
     const question = [
         {
             type: 'input',
@@ -88,8 +88,54 @@ const readInput = async (message) => {
 
 }
 
+const listTasksForDelete = async (tasks = []) => {
+
+    const choices = tasks.map((task, index) => {
+
+
+        const actualIndex = `${index + 1}.`.blue;
+
+        return {
+            value: task.id,
+            name: `${actualIndex} ${task.description}.`
+        }
+
+    });
+
+    const questions = [
+        {
+            type: 'list',
+            name: 'id',
+            message: 'Delete',
+            choices
+        }
+    ]
+
+    const { id } = await inquirer.prompt(questions);
+
+    return id;
+
+}
+
+const confirmation = async (message) => {
+
+    const question = [
+        {
+            type: 'confirm',
+            name: 'ok',
+            message
+        }
+    ]
+
+    const { ok } = await inquirer.prompt(question);
+
+    return ok;
+}
+
 module.exports = {
     menu,
     pause,
-    readInput
+    readInput,
+    listTasksForDelete,
+    confirmation
 }

@@ -3,7 +3,7 @@ require('colors');
 // ================================================================================ //
 
 // =============================== My imports ===================================== //
-const { menu, pause, readInput } = require('./helpers/inquirer');
+const { menu, pause, readInput, listTasksForDelete, confirmation } = require('./helpers/inquirer');
 const { saveData, loadData } = require('./helpers/save-data');
 const Tasks = require('./models/tasks');
 // =============================================================================== //
@@ -28,25 +28,36 @@ const Tasks = require('./models/tasks');
             case 1:
                 const taskDescription = await readInput('Write task description:');
                 tasks.addTask(taskDescription);
-                await pause();
                 break;
             case 2:
                 tasks.listTasksWithFormat();
-                await pause();
                 break;
             case 3:
                 tasks.listFinishedAndNotFinished();
-                await pause();
                 break;
             case 4:
                 tasks.listFinishedAndNotFinished(false);
-                await pause();
+                break
+            case 6:
+
+                const id = await listTasksForDelete(tasks.tasksArr);
+                const ok = await confirmation(`Are you sure?`);
+
+                if (ok) {
+
+                    let temporalDescription = tasks.list[id].description;
+                    tasks.deleteTask(id);
+                    console.log('\nThe task \"' + `${temporalDescription}`.blue + '\" was deleted.');
+
+                }
+
                 break;
             default:
                 await pause();
                 break;
         }
 
+        await pause();
         // We save all the tasks on .json
         saveData(tasks.tasksArr);
 
